@@ -1,0 +1,67 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "no-console": "warn",
+        "no-alert": "error",
+        "quotes": ["warn", "single"],
+        "jsx-quotes": ["warn", "prefer-single"],
+        "max-len": [
+            "warn",
+            {
+                "code": 120
+            }
+        ],
+        "comma-dangle": ["error", "always-multiline"],
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/no-unused-vars": "warn",
+        "import/no-unresolved": "error",
+        "import/default": "error",
+        "import/no-self-import": "error",
+        "import/order": [
+            "error",
+            {
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                },
+                "newlines-between": "always",
+                "groups": ["builtin", "external", "internal"],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "builtin",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["builtin"]
+            }
+        ],
+        "sort-imports": ["error", { "allowSeparatedGroups": true, "ignoreDeclarationSort": true }],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    }
+}

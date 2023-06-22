@@ -1,0 +1,141 @@
+@import 'app/styles/variables.scss';
+
+.button {
+    $button: &;
+
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    transition: color 0.2s, background-color 0.2s, opacity 0.2s, border 0.2s;
+    cursor: pointer;
+
+    // button__small
+    &__small {
+        padding: 8px 20px;
+        border-radius: 120px;
+        gap: 8px;
+    }
+
+    // button__medium
+    &__medium {
+        padding: 12px 26px;
+        border-radius: 60px;
+        gap: 8px;
+    }
+
+    // button__primary
+    &__primary {
+        background-color: $blue500;
+        color: $white;
+
+        &:hover {
+            background-color: $blue700;
+        }
+
+        &:active {
+            background-color: $blue900;
+        }
+
+        &:disabled {
+            background-color: $gray100;
+            color: $gray500;
+            cursor: not-allowed;
+        }
+    }
+
+    // button__default
+    &__default {
+        background-color: $white;
+        border: 2px solid $blue500;
+        color: $blue500;
+
+        &:hover {
+            color: $blue700;
+            border: 2px solid $blue700;
+        }
+
+        &:active {
+            color: $blue900;
+            border: 2px solid $blue900;
+        }
+
+        &:disabled {
+            background-color: $gray100;
+            border: 2px solid $gray500;
+            color: $gray500;
+            cursor: not-allowed;
+        }
+    }
+
+    // button__success
+    &__success {
+        background-color: $green500;
+        color: $white;
+
+        &:hover {
+            background-color: $green700;
+        }
+
+        &:active {
+            background-color: $green500;
+        }
+
+        &:disabled {
+            background-color: $gray100;
+            color: $gray500;
+            cursor: not-allowed;
+        }
+    }
+
+    // button__accent
+    &__accent {
+        background-color: $green700;
+        color: $white;
+
+        &:hover {
+            background-color: $green500;
+        }
+
+        &:active {
+            background-color: $green700;
+        }
+
+        &:disabled {
+            background-color: $gray100;
+            color: $gray500;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.loader {
+    position: absolute;
+    z-index: 9;
+    border-radius: 32px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+
+    // loader_spinner
+    &_spinner {
+        height: 24px;
+        width: 24px;
+        animation: 1s linear infinite spinner;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
