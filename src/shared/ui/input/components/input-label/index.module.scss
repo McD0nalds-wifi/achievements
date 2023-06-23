@@ -1,0 +1,12 @@
+@import 'app/styles/variables.scss';
+
+.label {
+    position: absolute;
+    z-index: 9;
+    padding: 2px 8px;
+    background-color: $white;
+    border-radius: 6px;
+    left: 12px;
+    top: -14px;
+    user-select: none;
+}

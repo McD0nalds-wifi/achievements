@@ -1,0 +1,16 @@
+.error {
+    position: absolute;
+    left: 4px;
+    margin-top: 6px;
+    transition: height 0.2s;
+
+    // error__show
+    &__show {
+        height: 20px;
+    }
+
+    // error__hide
+    &__hide {
+        height: 0px;
+    }
+}

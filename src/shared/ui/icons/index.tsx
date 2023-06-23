@@ -2,7 +2,9 @@ import { ReactNode } from 'react'
 
 import { ColorsType } from 'shared/common/constants'
 
-// export { CheckCircleBoldIcon } from './CheckCircleBoldIcon'
+export { ArrowRightIcon } from './ArrowRightIcon'
+export { DangerBoldIcon } from './DangerBoldIcon'
+export { UserBoldIcon } from './UserBoldIcon'
 
 export type IconCursorType = 'default' | 'pointer' | 'inherit'
 

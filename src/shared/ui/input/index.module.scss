@@ -1,0 +1,58 @@
+@import 'app/styles/variables.scss';
+
+.wrapper {
+    position: relative;
+    padding-bottom: 0px;
+    transition: 0.2s;
+
+    // wrapper__error
+    &__error {
+        padding-bottom: 26px;
+    }
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.input {
+    outline: none;
+    border-radius: 14px;
+    background-color: $white;
+    color: $black;
+    border: 2px solid $gray100;
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: border-color 0.2s;
+
+    // input__error
+    &__error {
+        border-color: $red500 !important;
+    }
+
+    &::placeholder {
+        color: $gray100;
+    }
+
+    &:hover {
+        border-color: $blue500;
+    }
+
+    &:disabled {
+        background-color: $gray100;
+        cursor: not-allowed;
+    }
+
+    &:focus {
+        border-color: $blue500;
+    }
+
+    // Hide input number arrows
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

@@ -1,0 +1,65 @@
+@import 'app/styles/variables';
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.selfie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    // selfie_image
+    &_image {
+        height: 120px;
+        width: 120px;
+        border-radius: 40px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // selfie_placeholder
+    &_placeholder {
+        height: 120px;
+        width: 120px;
+        background-color: $gray100;
+        border-radius: 40px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // selfie_button
+    &_button {
+        color: $blue500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $blue700;
+        }
+    }
+}
+
+.nextButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
